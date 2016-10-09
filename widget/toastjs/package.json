@@ -1,0 +1,89 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "toastjs",
+        "scope": null,
+        "escapedName": "toastjs",
+        "name": "toastjs",
+        "rawSpec": "",
+        "spec": "latest",
+        "type": "tag"
+      },
+      "C:\\Users\\xisa\\Desktop\\新建文件夹"
+    ]
+  ],
+  "_from": "toastjs@latest",
+  "_id": "toastjs@0.0.2",
+  "_inCache": true,
+  "_installable": true,
+  "_location": "/toastjs",
+  "_nodeVersion": "4.3.1",
+  "_npmOperationalInternal": {
+    "host": "packages-12-west.internal.npmjs.com",
+    "tmp": "tmp/toastjs-0.0.2.tgz_1475977484161_0.0015716252382844687"
+  },
+  "_npmUser": {
+    "name": "gtd_alp",
+    "email": "295194117@qq.com"
+  },
+  "_npmVersion": "3.10.6",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "toastjs",
+    "scope": null,
+    "escapedName": "toastjs",
+    "name": "toastjs",
+    "rawSpec": "",
+    "spec": "latest",
+    "type": "tag"
+  },
+  "_requiredBy": [
+    "#USER"
+  ],
+  "_resolved": "https://registry.npmjs.org/toastjs/-/toastjs-0.0.2.tgz",
+  "_shasum": "bfae2688d4c8c3b3db6e4c6e426ce60c34035c54",
+  "_shrinkwrap": null,
+  "_spec": "toastjs",
+  "_where": "C:\\Users\\xisa\\Desktop\\新建文件夹",
+  "author": {
+    "name": "xisa"
+  },
+  "bugs": {
+    "url": "https://github.com/gtdalp/toastjs/issues"
+  },
+  "dependencies": {},
+  "description": "弹出提示",
+  "devDependencies": {},
+  "directories": {},
+  "dist": {
+    "shasum": "bfae2688d4c8c3b3db6e4c6e426ce60c34035c54",
+    "tarball": "https://registry.npmjs.org/toastjs/-/toastjs-0.0.2.tgz"
+  },
+  "gitHead": "d5e72895abee031a1b4c6c3c7f27371b4e8aeb46",
+  "homepage": "https://github.com/gtdalp/toastjs#readme",
+  "keywords": [
+    "popup",
+    "alert",
+    "toast"
+  ],
+  "license": "ISC",
+  "main": "build/toast.js",
+  "maintainers": [
+    {
+      "name": "gtd_alp",
+      "email": "295194117@qq.com"
+    }
+  ],
+  "name": "toastjs",
+  "optionalDependencies": {},
+  "readme": "ERROR: No README data found!",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gtdalp/toastjs.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "version": "0.0.2"
+}
