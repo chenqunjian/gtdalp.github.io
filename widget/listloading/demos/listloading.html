@@ -8,12 +8,10 @@
 <title>listLoading</title>
 <link rel="stylesheet" type="text/css" href="../src/css/base.css" />
 <link rel="stylesheet" type="text/css" href="listloading.css" />
-<script src="../src/jslib/zepto.min.js"></script>
-<script src="../src/jslib/iscroll.js"></script>
-<script src="../build/listloading.min.js"></script>
+<script src="../src/jslib/require.js"></script>
 <script>
-$(function () {
-
+require(['zepto', 'iscroll', 'listloading'], function(){
+    var Listloading = require('listloading');
     var m = 3;
     var n = 0;
     var hei = $(window).height();
@@ -32,68 +30,76 @@ $(function () {
         return __html;
     }
     // demo
-    // var listloading = $('#listloading').listloading({
-    //     disableTime: true,  // 是否需要显示时间
-    //     pullUpAction : function(cb){   //上拉加载更多
-    //         m--;
-    //         var flg = false;
-    //         var __html = createHtml();
-    //         if(m < 1){
-    //             flg = true;
-    //         }else{
-    //             $('#order-list').append(__html);
-    //         }
-    //         // 数据加载完毕需要返回 end为true则为全部数据加载完毕
-    //         cb(flg);
-            
-    //     },
-    //     pullDownAction : function(cb){  //下拉刷新
-    //         m = 3;
-    //         var __html = createHtml();
-    //         $('#order-list').html(__html);
-    //         // 执行完执行方法之后必须执行回调 回调的作用是通知默认加载已经全部执行完毕，程序需要去创建iscroll
-    //         cb();
-    //     },
-    //     // iscroll的API 
-    //     iscrollOptions: {
-    //         //
-    //     }
-    // });
-    // // 点击事件
-    // listloading.evt('li', 'click', function (dom) {
-    //     // dom.remove();
-    //     // $('#order-list').append(createHtml());
-    //     // listloading.refresh();
-    // });
-
-    // demo
-    var k = 3;
-    var listloadingClass = $('.listloadingClass').listloading({
-        pullUpAction : function(cb){   //上拉加载更多
-            k--;
+    var listloading = new Listloading('#listloading', {
+        disableTime: true,  // 是否需要显示时间
+        pullUpAction : function(cb){   // 上拉加载更多
+            m--;
             var flg = false;
             var __html = createHtml();
-            if(k < 1){
+            if(m < 1){
                 flg = true;
             }else{
-                $('#listloadingClass-order-list').append(__html);
+                $('#order-list').append(__html);
             }
             // 数据加载完毕需要返回 end为true则为全部数据加载完毕
             cb(flg);
             
         },
-        pullDownAction : function(cb, flag){  //下拉刷新
-            // flag 为true 第一次加载
-            if (flag) {
-                // dosomething...
-            }
-            k = 3;
+        pullDownAction : function(cb){  // 下拉刷新
+            m = 3;
             var __html = createHtml();
-            $('#listloadingClass-order-list').html(__html);
+            $('#order-list').html(__html);
             // 执行完执行方法之后必须执行回调 回调的作用是通知默认加载已经全部执行完毕，程序需要去创建iscroll
             cb();
+        },
+        // iscroll的API 
+        iscrollOptions: {
+            //
         }
     });
+
+    // 点击事件
+    listloading.evt('li', 'click', function (dom) {
+        dom.remove();
+        // $('#order-list').append(createHtml());
+        listloading.refresh();
+    });
+    
+    // demo
+    // var k = 3;
+    // var listloadingClass = new Listloading('.listloadingClass', {
+    //     pullUpAction : function(cb){   //上拉加载更多
+    //         k--;
+    //         var flg = false;
+    //         var __html = createHtml();
+    //         if(k < 1){
+    //             flg = true;
+    //         }else{
+    //             $('#listloadingClass-order-list').append(__html);
+    //         }
+    //         // 数据加载完毕需要返回 end为true则为全部数据加载完毕
+    //         cb(flg);
+            
+    //     },
+    //     pullDownAction : function(cb, flag){  //下拉刷新
+    //         // flag 为true 第一次加载
+    //         if (flag) {
+    //             // dosomething...
+    //         }
+    //         k = 3;
+    //         var __html = createHtml();
+    //         $('#listloadingClass-order-list').html(__html);
+    //         // 执行完执行方法之后必须执行回调 回调的作用是通知默认加载已经全部执行完毕，程序需要去创建iscroll
+    //         cb();
+    //     }
+    // });
+});
+require.config({
+    paths: {
+        "zepto": "../src/jslib/zepto.min",
+        "iscroll": "../src/jslib/iscroll.min",
+        "listloading": "../build/listloading.min"
+    }
 });
 </script>
 </head>
@@ -170,15 +176,15 @@ body{
     overflow:hidden;
 }
 </style>
-<!-- <div id="listloading">
+<div id="listloading">
     <div>
         <ul id="order-list" class="order-list"></ul>
     </div>
-</div> -->
-<div class="listloadingClass">
+</div>
+<!-- <div class="listloadingClass">
     <div>
         <ul id="listloadingClass-order-list" class="order-list"></ul>
     </div>
-</div>
+</div> -->
 </body>
 </html>
