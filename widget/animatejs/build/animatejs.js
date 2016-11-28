@@ -15,7 +15,7 @@
     root.Animatejs = factory();
   }
 }(this, function() {
-    'use strict';
+    // 'use strict';
     if (!window.$) {
         function inArray(array, item){
             var yes = false;
