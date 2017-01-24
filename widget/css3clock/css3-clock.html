@@ -150,22 +150,22 @@ $(function() {
     function timer() {
         var nowTime = new Date();
         var h = +nowTime.getHours();
-        var m = +nowTime.getMinutes();
+        // var m = +nowTime.getMinutes();
 
         // 可以使用秒来测试 看效果
-        // var m = +nowTime.getSeconds();
+        var m = +nowTime.getSeconds();
 
         // 判断时钟如果大于上一次 则翻转 时
-        if (h > loadHours || h === 0) {
+        if (h >= loadHours) {
             $('.hours-copy').addClass('active');
             loadHours = h;
-            if (loadHours === 10) {
+            if (loadHours === 23) {
                 loadHours = 0;
             }
         }
 
         // 判断分钟如果大于上一次 则翻转 分
-        if (m > loadMinutes || m === 0) {
+        if (m >= loadMinutes) {
             $('.minutes-copy').addClass('active');
             loadMinutes = m;
             if (loadMinutes === 59) {
