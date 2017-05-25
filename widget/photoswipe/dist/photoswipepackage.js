@@ -6,7 +6,14 @@ var photoswipeObj = {
         var aHtml = function (o) {
             var maxImgSrc1 = o.maxImgSrc1 || '';
             var maxImgSrc2 = o.maxImgSrc2 || '';
-            var html = '<a href="' + maxImgSrc1 + '" data-size="' + o.maxImgSrc1wh + '" data-med="' + o.maxImgSrc2 + '" data-med-size="' + o.maxImgSrc1wh + '" data-author="' + (o.author || '') + '" class="demo-gallery__img--main">\
+
+            var maxImgSrc1wh = o.maxImgSrc1wh || '';
+            var maxImgSrc2wh = o.maxImgSrc2wh || '';
+            if (!maxImgSrc2) {
+                maxImgSrc2 = maxImgSrc1;
+                maxImgSrc2wh = maxImgSrc1wh;
+            }
+            var html = '<a href="' + maxImgSrc1 + '" data-size="' + maxImgSrc1wh + '" data-med="' + maxImgSrc2 + '" data-med-size="' + maxImgSrc2wh + '" data-author="' + (o.author || '') + '" class="demo-gallery__img--main">\
               <img src="' + o.minImgSrc + '" alt="" />\
               <figure>' + (o.msg || '') + '</figure>\
             </a>';
@@ -22,7 +29,7 @@ var photoswipeObj = {
         return html;
     },
     // 创建弹出框图片
-    createGalleryDialog: function () {
+    createGalleryDialog: function (dom) {
         // 如果存在则不在渲染
         if (document.querySelector('#gallery')) {
             return;
@@ -68,6 +75,8 @@ var photoswipeObj = {
         </div>';
         // <button class="pswp__button pswp__button--share" title="Share"></button>\
         galleryDom.innerHTML = galleryHtml;
+        // 初始化
+        photoswipeObj.initPhotoSwipeFromDOM(dom);
     },
     initPhotoSwipeFromDOM: function(gallerySelector) {
     
@@ -232,7 +241,8 @@ var photoswipeObj = {
                         captionEl.children[0].innerText = '';
                         return false;
                     }
-                    captionEl.children[0].innerHTML = item.title +  '<br/><small>Photo: ' + item.author + '</small>';
+                    var author = item.author ? '<br/><small>Photo:' + item.author + '</small>' : '';
+                    captionEl.children[0].innerHTML = item.title + author;
                     return true;
                 },
                 
@@ -358,10 +368,10 @@ var photoswipeObj = {
 }
 
 window.photoswipe = {
-    init: function (dom, obj, cb) {
-        var html = photoswipeObj.createImgTpl(obj);
-        cb(html)
-        photoswipeObj.createGalleryDialog();
-        photoswipeObj.initPhotoSwipeFromDOM(dom);
+    init: function (dom) {
+        photoswipeObj.createGalleryDialog(dom);
+    },
+    createImgTpl: function (obj, cb) {
+        return photoswipeObj.createImgTpl(obj);
     }
 }
