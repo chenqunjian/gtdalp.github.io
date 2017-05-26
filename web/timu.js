@@ -1,18 +1,19 @@
-window.tpl = function (arr, title) {
+window.tpl = function (arr, title, show) {
     console.log(arr)
     var html = '';
     var len = arr.length;
     for (var i = 0; i < len; i++) {
         html += '<li>';
         var dataF = arr[i];
-        var cls = ' data-true="1"';
         var flg = dataF[5];
+        var cls = show ? ' class="active" ' : '';
+        var datatrue = ' data-true="1"' + cls;
         html += '<p class="title">' + (i + 1) + '.' + dataF[0] + '</p>';
         html += '<p class="selected">\
-            <span' + (flg == '标准答案：A' ? cls : '') + '>A、 ' + dataF[1] + '</span>\
-            <span' + (flg == '标准答案：B' ? cls : '') + '>B、 ' + dataF[2] + '</span>\
-            <span' + (flg == '标准答案：C' ? cls : '') + '>C、 ' + dataF[3] + '</span>\
-            <span' + (flg == '标准答案：D' ? cls : '') + '>D、 ' + dataF[4] + '</span>\
+            <span' + (flg == '标准答案：A' ? datatrue : '') + '>A、 ' + dataF[1] + '</span>\
+            <span' + (flg == '标准答案：B' ? datatrue : '') + '>B、 ' + dataF[2] + '</span>\
+            <span' + (flg == '标准答案：C' ? datatrue : '') + '>C、 ' + dataF[3] + '</span>\
+            <span' + (flg == '标准答案：D' ? datatrue : '') + '>D、 ' + dataF[4] + '</span>\
         </p>';
         html += '</li>';
     }
