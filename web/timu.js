@@ -6,7 +6,7 @@ window.tpl = function (arr, title, o) {
         html += '<li>';
         var dataF = arr[i];
         var flg = dataF[5];
-        var cls = o.show ? ' class="active" ' : '';
+        var cls = (o && o.show) ? ' class="active" ' : '';
         var datatrue = ' data-true="1"' + cls;
         html += '<p class="title">' + (i + 1) + '.' + dataF[0] + '</p>';
         html += '<p class="selected">\
