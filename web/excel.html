@@ -18,21 +18,33 @@ function readThis(){
     var oXL = new ActiveXObject("Excel.application");   
     var oWB = oXL.Workbooks.open(filePath);   
     oWB.worksheets(1).select();  
-    var len = 600;       // 要取到的多少条数据  
+    var len = 70;       // 要取到的多少条数据  
     var oSheet = oWB.ActiveSheet;   
     try{   
+
+        // 英语1
         for(var i=1;i<= len;i++){  
             var val = oSheet.Cells(i,1).value;
-            if ((i%6-1) == 0 || i == 1) {
-                tempStr += '],<br/>[<br/>"' + val + '",<br/>';
+            if (i%2 == 0) {
+                tempStr += '<li><p class="title">' + val + '</p>';
             }else {
-                tempStr += '"' + val + '",<br/>';
+                tempStr += '<p class="text"><span data-true="1" class="active">' + val + '</span></p></li>';
             } 
-        }   
+        } 
+
+        // 英语2
+        // for(var i=1;i<= len;i++){  
+        //     var val = oSheet.Cells(i,1).value;
+        //     if ((i%6-1) == 0 || i == 1) {
+        //         tempStr += '],<br/>[<br/>"' + val + '",<br/>';
+        //     }else {
+        //         tempStr += '"' + val + '",<br/>';
+        //     } 
+        // } 
     }catch(e){   
         document.all.txtArea.innerHTML = tempStr;   
     }   
-    console.log(i)
+    console.log(tempStr)
     document.all.txtArea.innerHTML = tempStr;   
     oXL.Quit();   
     CollectGarbage();   

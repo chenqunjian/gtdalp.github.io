@@ -1,4 +1,4 @@
-window.tpl = function (arr, title, show) {
+window.tpl = function (arr, title, o) {
     console.log(arr)
     var html = '';
     var len = arr.length;
@@ -6,7 +6,7 @@ window.tpl = function (arr, title, show) {
         html += '<li>';
         var dataF = arr[i];
         var flg = dataF[5];
-        var cls = show ? ' class="active" ' : '';
+        var cls = o.show ? ' class="active" ' : '';
         var datatrue = ' data-true="1"' + cls;
         html += '<p class="title">' + (i + 1) + '.' + dataF[0] + '</p>';
         html += '<p class="selected">\
