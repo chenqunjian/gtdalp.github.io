@@ -34,3 +34,7 @@
     font-size:15px;
     line-height: 24px;
 }
+.col-red{
+    font-weight: bold;
+    color:red;
+}
