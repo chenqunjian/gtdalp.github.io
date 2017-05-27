@@ -10,10 +10,10 @@ window.tpl = function (arr, title, o) {
         var datatrue = ' data-true="1"' + cls;
         html += '<p class="title">' + (i + 1) + '.' + dataF[0] + '</p>';
         html += '<p class="selected">\
-            <span' + (flg == '标准答案：A' ? datatrue : '') + '>A、 ' + dataF[1] + '</span>\
-            <span' + (flg == '标准答案：B' ? datatrue : '') + '>B、 ' + dataF[2] + '</span>\
-            <span' + (flg == '标准答案：C' ? datatrue : '') + '>C、 ' + dataF[3] + '</span>\
-            <span' + (flg == '标准答案：D' ? datatrue : '') + '>D、 ' + dataF[4] + '</span>\
+            <span' + (flg == '标准答案：A' ? datatrue : '') + '>' + dataF[1] + '</span>\
+            <span' + (flg == '标准答案：B' ? datatrue : '') + '>' + dataF[2] + '</span>\
+            <span' + (flg == '标准答案：C' ? datatrue : '') + '>' + dataF[3] + '</span>\
+            <span' + (flg == '标准答案：D' ? datatrue : '') + '>' + dataF[4] + '</span>\
         </p>';
         html += '</li>';
     }
