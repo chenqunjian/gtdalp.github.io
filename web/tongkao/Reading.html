@@ -1,0 +1,163 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, width=device-width, maximum-scale=1.0"/>
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="format-detection" content="telephone=no" />
+<title></title>
+<link rel="stylesheet" type="text/css" href="../css/comm.css">
+<link rel="stylesheet" type="text/css" href="style.css">
+<script src="../js/jquery-1.8.0.min.js"></script>
+<script src="timu.js"></script>
+<script src="xuanzetiJson.js"></script>
+<script>
+$(function () {
+    $('.radio-ul>li>p>span').click(function(){
+        $(this).addClass('active').siblings().removeClass('active');
+    });
+});
+</script>
+<style>
+.radio-ul>li span{
+    float:left;
+    margin-right:50px;
+}
+</style>
+</head>
+<body>
+<h3 class="title-h3">阅读理解</h3>
+<ul class="radio-ul">
+    <li>
+        <p class="miaoshu">In 1626, Manhattan Island was purchased（购买）from the Indians by Peter Minuit. It cost about $ 2,400. At first, it was called New Amsterdam by the Dutch settlers. Later it was renamed New York by the English.
+        The city grew rapidly. There were several reasons for this, but the most important one is its location. New York is situated on the best American harbor on the Atlantic Ocean. It also lies on the Hudson River, which allows water transportation into the middle of the United States.
+        Today New York has a population of approximately eight million. The city has groups from many races. It is famous for its Chinatown. It also has the largest Jewish population of any city outside Israel. After the blacks were released from slavery, a large number of them moved into cities like New York, Philadelphia, and Washington. More recently, people from Puerto Rico have done the same thing.
+        New York is made up of five boroughs（行政区）. The Bronx is the only one located on the mainland, with Brooklyn, Richmond, and Queens being on islands. It is a large manufacturing center because factories can be located near good water transportation. Two of the main businesses are the clothing industry and the printing industry. Most large publishing companies have their headquarters there.
+        </p>
+        <p class="title">6.Manhattan was bought by Peter Minuit.</p>
+        <p class="selected">
+            <span data-true="1">A. T</span>
+            <span>B. F</span>
+        </p>
+    </li>
+    <li>
+        <p class="title">7.The Indians named the city New York.</p>
+        <p class="selected">
+            <span>A. T</span>
+            <span data-true="1">B. F</span>
+        </p>
+    </li>
+    <li>
+        <p class="title">8.New York grows so rapidly, because of its people.</p>
+        <p class="selected">
+            <span>A. T</span>
+            <span data-true="1">B. F</span>
+        </p>
+    </li>
+    <li>
+        <p class="title">9.New York borough Bronx is not on an island.</p>
+        <p class="selected">
+            <span data-true="1">A. T</span>
+            <span>B. F</span>
+        </p>
+    </li>
+    <li>
+        <p class="title">10.The printing industry and the clothing industry are two of the main businesses of New York.</p>
+        <p class="selected">
+            <span data-true="1">A. T</span>
+            <span>B. F</span>
+        </p>
+    </li>
+    <li>
+        <p class="miaoshu">In the United States, it is not customary to telephone someone very early in the morning. If you telephone him early in the day, while he is shaving or having breakfast, the time of the call shows that the matter is very important and requires immediate attention. The same meaning is attached to telephone calls made after 11:00 pm. If someone receives a call during sleeping hours, he assumes it's a matter of life or death. The time chosen for the call communicates its importance.
+        In social life, time plays a very important part. In the U.S.A. guests tend to feel they are not highly regarded if the invitation to a dinner party is extended only three or four days before the party date. But it is not true in all countries. In other areas of the world, it may be considered foolish to make an appointment too far in advance because plans which are made for a date more than a week away tend to be forgotten. The meaning of time differs in different parts of the world. Thus, misunderstandings arise between people from different cultures that treat time differently. Promptness is valued highly in American life, for example. If people are not prompt, they may be regarded as impolite or not fully responsible. In the U.S. no one would think of keeping a business associate waiting for an hour, it would be too impolite. A person, who is 5 minutes late, will say a few words of explanation, though perhaps he will not complete the sentence..</p>
+        <p class="title">11.What is the main idea of this passage? ________</p>
+        <p class="selected">
+            <span>A.It is not customary to telephone someone in the morning and in sleeping hours in the U.S.</span>
+            <span data-true="1">B.The role of time in social life over the world.</span>
+            <span>C.If people are late, they may be regarded as impolite or not fully responsible in the U.S.</span>
+            <span>D.Not every country treats the concept of time as the same.</span>
+        </p>
+    </li>
+    <li>
+        <p class="title">12.What does it mean in the passage if you call someone during his or her sleeping hours? _______</p>
+        <p class="selected">
+            <span>A.A matter of work.</span>
+            <span data-true="1">B.A matter of life or death.</span>
+            <span>C.You want to see him or her.</span>
+            <span>D.You want to make an appointment with him or her.</span>
+        </p>
+    </li>
+    <li>
+        <p class="title">13.Which of the following time is proper if you want to make an appointment with your friend in the U.S. A .?</p>
+        <p class="selected">
+            <span>A.at 7:00 am</span>
+            <span data-true="1">B.at 4:00 pm</span>
+            <span>C.at the midnight</span>
+            <span>D.at 4 am</span>
+        </p>
+    </li>
+    <li>
+        <p class="title">14.Which of the following statements is true according to the passage? ________</p>
+        <p class="selected">
+            <span>A.In the U.S.A . guests tend to feel they are highly regarded if the invitation to a dinner party is extended only three or four days before the party date.</span>
+            <span>B.No misunderstandings arise between people from different cultures about the concept of time.</span>
+            <span>C.It may be considered foolish to make an appointment well in advance in the U.S.A ..</span>
+            <span data-true="1">D.Promptness is valued highly in American life.</span>
+        </p>
+    </li>
+    <li>
+        <p class="title">15.From the passage we can safely infer that _______</p>
+        <p class="selected">
+            <span>A.it’s a matter of life or death if you call someone in day time.</span>
+            <span data-true="1">B.the meaning of time differs in different parts of the world.</span>
+            <span>C.it makes no difference in the U.S. whether you are early or late for a business party.</span>
+            <span>D.if a person is late for a date, he needn’t make some explanation.</span>
+        </p>
+    </li>
+    <li>
+        <p class="miaoshu">There was a woman in Detroit, who had two sons. She was worried about them, especially the younger one, Ben, because he was not doing well in school. Boys in his class made jokes about him because he seemed so <em class="col-red">___21___</em>.
+        The mother decided that she would herself have to get her sons to do better in school. She told them to go to the Detroit Public Library to read a book a week and do a book report for her.
+        One day, in Ben's <em class="col-red">___22___</em>, the teacher held up a rock and asked if anyone knew it. Ben put up his hand and the teacher let him <em class="col-red">___23___</em>. “Why did Ben put up his hand?” his classmates wondered. “He never said anything. What could he possibly want to say?”
+        Well, Ben not only <em class="col-red">___24___</em> the rock, but also said a lot about it. He named other rocks in its group and even knew where the teacher had found it. The teacher and the students were surprised. Ben had learned all this from doing one of his book reports.
+        Ben later went on to the <em class="col-red">___25___</em> of his class. When he finished high school, he went to Yale University and at last became one of the best doctors in the United States．.</p>
+    </li>
+    <li>            <p class="title">21. </p>            <p class="selected">                <span>A.top</span>                <span data-true="1">B.slow</span>                <span>C.class</span>                <span>D.answer</span>                <span>E.knew</span>            </p>        </li><li>            <p class="title">22. </p>            <p class="selected">                <span>A.top</span>                <span>B.slow</span>                <span data-true="1">C.class</span>                <span>D.answer</span>                <span>E.knew</span>            </p>        </li><li>            <p class="title">23. </p>            <p class="selected">                <span>A.top</span>                <span>B.slow</span>                <span>C.class</span>                <span data-true="1">D.answer</span>                <span>E.knew</span>            </p>        </li><li>            <p class="title">24. </p>            <p class="selected">                <span>A.top</span>                <span>B.slow</span>                <span>C.class</span>                <span>D.answer</span>                <span data-true="1">E.knew</span>            </p>        </li><li>            <p class="title">25. </p>            <p class="selected">                <span data-true="1">A.top</span>                <span>B.slow</span>                <span>C.class</span>                <span>D.answer</span>                <span>E.knew</span>            </p>        </li>
+    <li>
+        <p class="miaoshu">There are different ways in which people try to deal with the problem of energy. One way is the greater production of common energy sources, such as coal, oil and gas. The trouble with these sources, however, is that they are not renewable（可再生的）.
+Another way is energy conservation（节能）, which means using energy more efficiently. In some very cold countries, people build special houses to save energy. They place materials between the inside and outside of the walls of the house to keep the cold out and the warmth in.
+Finally, renewable energy sources are used even though they are often expensive to develop. One form of these is geothermal energy（地热）. In certain parts of the world, the temperature of the earth increases thirty degrees centigrade（摄氏）with each kilometer down. At six kilometers, therefore, it rises to nearly two hundred degrees. Heat from the earth is already used in some countries..</p>
+    </li>
+    <li>            <p class="title">6.Four different ways of dealing with energy problems are talked about in the passage.</p>            <p class="selected">                <span>A.T</span>                <span data-true="1">B.F</span>            </p>        </li><li>            <p class="title">7.We can learn from the passage that coal is the most common source of energy.</p>            <p class="selected">                <span>A.T</span>                <span data-true="1">B.F</span>            </p>        </li><li>            <p class="title">8.Special houses are built because they can save energy.</p>            <p class="selected">                <span data-true="1">A.T</span>                <span>B.F</span>            </p>        </li><li>            <p class="title">9.According to the passage, geothermal energy is heat inside the earth.</p>            <p class="selected">                <span data-true="1">A.T</span>                <span>B.F</span>            </p>        </li><li>            <p class="title">10.At four km deep, the temperature of the earth rises to nearly 200°C.</p>            <p class="selected">                <span>A.T</span>                <span data-true="1">B.F</span>            </p>        </li>
+
+    <li>
+        <p class="miaoshu">One day a bookseller（书商）let a big box of books fall on his foot. "Go to see the doctor," said his wife. "No, "he said. "I'll wait until the doctor comes into the shop next time. Then I'll ask him about my foot. If I go to see him, I'll have to pay him."
+On the next day the doctor came into the shop for some books. When the bookseller was getting them ready, he told the doctor about his bad foot. The doctor looked at it.
+"You must put that foot in hot water every night. Then you must put something on it," said the doctor.
+He took out a piece of paper and wrote on it. "Buy this and put it on the foot before you go to bed every night," he said.
+"Thank you," said the bookseller. "And now, sir, here are your books."
+"How much?" said the doctor.
+"Two pounds."
+"Good," said the doctor. "I shall not have to pay you anything."
+"Why?" asked the bookseller.
+"I told you about your foot. I want two pounds for that. If people come to my house, I ask them to pay one pound for a small thing like that. But when I go to their houses, I want two pounds. And I came here, didn't I?".</p>
+    </li>
+    <li>            <p class="title">11.What happened to the bookseller one day?</p>            <p class="selected">                <span>A.He lost a box of books.</span>                <span data-true="1">B.His foot was wounded by a box of books.</span>                <span>C.He lent the doctor a box of books.</span>                <span>D.He sold out all his books.</span>            </p>        </li><li>            <p class="title">12.The bookseller's wife asked him ______.</p>            <p class="selected">                <span>A.to go out for some medicine</span>                <span>B.to send somebody for a doctor</span>                <span data-true="1">C.to go to see the doctor</span>                <span>D.to wait for the doctor to come</span>            </p>        </li><li>            <p class="title">13.The bookseller didn't take his wife's advice because ______.</p>            <p class="selected">                <span>A.he was afraid of the doctor</span>                <span>B.he didn't like to take medicine</span>                <span>C.he couldn't walk by himself</span>                <span data-true="1">D.he didn't want to pay the doctor</span>            </p>        </li><li>            <p class="title">14.The doctor paid ______ for the books.</p>            <p class="selected">                <span>A.one pound</span>                <span>B.two pounds</span>                <span data-true="1">C.nothing</span>                <span>D.something</span>            </p>        </li><li>            <p class="title">15.The bookseller paid ______ money for seeing the doctor in the end.</p>            <p class="selected">                <span data-true="1">A.more</span>                <span>B.less</span>                <span>C.the same amount of</span>                <span>D.no</span>            </p>        </li>
+
+    <li>
+        <p class="miaoshu">Since his retirement, one day was just like any other day for John Smith. He woke <em class="col-red">__21__</em> precisely at 5:35 a.m.. He went downstairs with his pajamas (睡衣裤)at six o'clock and <em class="col-red">__22__</em> himself a cup of hot coffee from the pot which his wife, Mary, had filled and plugged in (给......通上电源)some fifteen minutes ago. He reached for the newspaper as he <em class="col-red">__23__</em> the cup to his lips.
+        This day was different.
+        It was terrible! He dropped the newspaper and cup. With closed eyes, he swallowed and began to shout: "Mary!". Mrs. Smith was unaccustomed to hearing her husband say much of anything. In fact for the past few days, he had hardly paid any attention at all to many of her important questions. She rushed back to the kitchen.
+        "John, what is the matter? Oh, you've spilled coffee all over yourself and the newspaper."
+        She was shocked <em class="col-red">__24__</em> her husband's behavior. She wondered what he had read that may have upset him so much. He was not amused at her innocent expression. The coffee was terrible. It was <em class="col-red">__25__</em> to drink. She must have purchased a new kind of coffee at the market..</p>
+    </li>
+    <li>            <p class="title">21. </p>            <p class="selected">                <span>A.poured</span>                <span>B.by</span>                <span>C.raised</span>                <span data-true="1">D.up</span>                <span>E.too bitter</span>            </p>        </li><li>            <p class="title">22. </p>            <p class="selected">                <span data-true="1">A.poured</span>                <span>B.by</span>                <span>C.raised</span>                <span>D.up</span>                <span>E.too bitter</span>            </p>        </li><li>            <p class="title">23. </p>            <p class="selected">                <span>A.poured</span>                <span>B.by</span>                <span data-true="1">C.raised</span>                <span>D.up</span>                <span>E.too bitter</span>            </p>        </li><li>            <p class="title">24. </p>            <p class="selected">                <span>A.poured</span>                <span data-true="1">B.by</span>                <span>C.raised</span>                <span>D.up</span>                <span>E.too bitter</span>            </p>        </li><li>            <p class="title">25. </p>            <p class="selected">                <span>A.poured</span>                <span>B.by</span>                <span>C.raised</span>                <span>D.up</span>                <span data-true="1">E.too bitter</span>            </p>        </li>
+    <li>
+        <p class="miaoshu">fdafdsafdsafdsafdsafdsad.</p>
+    </li>
+
+
+
+</ul>
+</body>
+</html>
