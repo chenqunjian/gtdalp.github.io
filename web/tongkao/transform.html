@@ -5,17 +5,17 @@
 <meta name="viewport" content="user-scalable=no, width=device-width, maximum-scale=1.0"/>
 <meta name="apple-mobile-web-app-capable" content="yes" />
 <meta name="format-detection" content="telephone=no" />
-<title>阅读理解</title>
+<title>翻译</title>
 <link rel="stylesheet" type="text/css" href="../css/comm.css">
 <link rel="stylesheet" type="text/css" href="style.css">
 <script src="../js/jquery-1.8.0.min.js"></script>
 <script src="timu.js"></script>
-<script src="reading.js"></script>
+<script src="transformJson.js"></script>
 <script>
 $(function () {
-    tplReading(readingJson);
-    $('.radio-ul>li>p>span').click(function(){
-        $(this).addClass('active').siblings().removeClass('active');
+    transformFn(transformJson);
+    $('.radio-ul>li.title').click(function(){
+        $(this).next('li').removeClass('dn');
     });
 });
 </script>
@@ -24,10 +24,20 @@ $(function () {
     float:left;
     margin-right:50px;
 }
+.radio-ul>li.title{
+    cursor:pointer;
+}
+.radio-ul>li.text-li{
+    margin-top:0;
+}
+.radio-ul>li .text{
+    color:#C80000;
+    font-size:20px;
+}
 </style>
 </head>
 <body>
-<h3 class="title-h3">阅读理解</h3>
+<h3 class="title-h3">翻译</h3>
 <ul class="radio-ul"></ul>
 </body>
 </html>

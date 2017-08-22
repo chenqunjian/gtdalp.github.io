@@ -4,7 +4,7 @@ window.tpl = function (arr, title, o) {
     var len = arr.length;
     var l = len/7;
 
-    for (var i = 0; i < 50; i++) {
+    for (var i = 0; i < l; i++) {
         html += '<li>';
         var n = 7*i;
         var t = arr[n];
@@ -27,12 +27,9 @@ window.tpl = function (arr, title, o) {
     document.title = title;
     $('body').append('<h3 class="title-h3">' + title + '</h3><ul class="radio-ul"></ul>');
     $('.radio-ul').html(html);
-    $('.radio-ul>li>p>span').click(function(){
-        $(this).addClass('active').siblings().removeClass('active');
-    });
 }
 
-window.tplReading = function (arr) {
+window.tplReading = function (arr, flg) {
     var k = 0;
     var len = arr.length;
     var html = '';
@@ -42,7 +39,7 @@ window.tplReading = function (arr) {
         var type = dataF.type;
         var data = dataF.arr;
 
-        html += '<li><p class="miaoshu">' + title + '</p></li>';
+        if (!flg) html += '<li><p class="miaoshu">' + title + '</p></li>';
         if (type == 1) {
             html += creatHtml1(data);
         }
@@ -53,7 +50,12 @@ window.tplReading = function (arr) {
             html += creatHtml3(data);
         }
     }
-    $('.radio-ul').html(html);
+    if (flg) {
+        $('.radio-ul').append(html);
+    } else {
+        $('.radio-ul').html(html);
+    }
+    
 }
 var creatHtml3 = function (arr) {
     var html = '';
@@ -122,4 +124,21 @@ var creatHtml1 = function (arr) {
         </li>';
     }
     return html;
+}
+
+
+// 翻译
+window.transformFn = function (arr) {
+    var html = '';
+    var len = arr.length;
+
+    for (var i = 0; i < len; i++) {
+        var dataF = arr[i];
+        if (i%2 == 0) {
+            html +='<li class="title"><p class="title">' + dataF + '</p></li>';
+        } else {
+            html +='<li class="text-li dn"><p class="text">' + dataF + '</p></li>';
+        }
+    }
+    $('.radio-ul').html(html);
 }

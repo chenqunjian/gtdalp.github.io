@@ -15,6 +15,11 @@
 <script>
 $(function () {
     tpl(xuanzetiJson, '大学英语B统考英语');
+    
+    tplReading(understanding, true);
+    $('.radio-ul>li>p>span').click(function(){
+        $(this).addClass('active').siblings().removeClass('active');
+    });
 });
 </script>
 </head>
