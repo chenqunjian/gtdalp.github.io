@@ -32,9 +32,30 @@ window.tpl = function (arr, title, o) {
     });
 }
 
+window.tplReading = function (arr) {
+    var k = 0;
+    var len = arr.length;
+    var html = '';
+    for (; k < len; k++) {
+        var dataF = arr[k];
+        var title = dataF.title;
+        var type = dataF.type;
+        var data = dataF.arr;
 
-
-var creatHtml3 = function (arr, eee) {
+        html += '<li><p class="miaoshu">' + title + '</p></li>';
+        if (type == 1) {
+            html += creatHtml1(data);
+        }
+        if (type == 2) {
+            html += creatHtml2(data);
+        }
+        if (type == 3) {
+            html += creatHtml3(data);
+        }
+    }
+    $('.radio-ul').html(html);
+}
+var creatHtml3 = function (arr) {
     var html = '';
     var len = arr.length;
     var l = len/7;
@@ -55,7 +76,7 @@ var creatHtml3 = function (arr, eee) {
             </p>\
         </li>';
     }
-    console.log(html);
+    return html;
 }
 
 var creatHtml2 = function (arr) {
@@ -78,7 +99,7 @@ var creatHtml2 = function (arr) {
             </p>\
         </li>';
     }
-    console.log(html);
+    return html;
 }
 
 
@@ -100,5 +121,5 @@ var creatHtml1 = function (arr) {
             </p>\
         </li>';
     }
-    console.log(html);
+    return html;
 }

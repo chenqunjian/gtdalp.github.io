@@ -10,9 +10,11 @@
 <link rel="stylesheet" type="text/css" href="style.css">
 <script src="../js/jquery-1.8.0.min.js"></script>
 <script src="timu.js"></script>
+<script src="reading.js"></script>
 <script src="xuanzetiJson.js"></script>
 <script>
 $(function () {
+    tplReading(readingJson);
     $('.radio-ul>li>p>span').click(function(){
         $(this).addClass('active').siblings().removeClass('active');
     });
