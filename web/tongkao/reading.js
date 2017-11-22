@@ -7,7 +7,7 @@ window.readingJson = [
         New York is made up of five boroughs（行政区）. The Bronx is the only one located on the mainland, with Brooklyn, Richmond, and Queens being on islands. It is a large manufacturing center because factories can be located near good water transportation. Two of the main businesses are the clothing industry and the printing industry. Most large publishing companies have their headquarters there.',
         type: 1,
         arr: [
-        '6.Manhattan was bought by Peter Minuit.',
+        '6.Manhattan was bought by Peter Minuit.', 
         'A.T',
         'B.F',
         '答案：A',
@@ -27,6 +27,50 @@ window.readingJson = [
         'A.T',
         'B.F',
         '答案：A'
+        ]
+    },{
+        title: 'One day a bookseller（书商）let a big box of books fall on his foot. “Go to see the doctor,“ said his wife. “No, “he said. “I’ll wait until the doctor comes into the shop next time. Then I’ll ask him about my foot. If I go to see him, I’ll have to pay him.“\
+        On the next day the doctor came into the shop for some books. When the bookseller was getting them ready, he told the doctor about his bad foot. The doctor looked at it.\
+        “You must put that foot in hot water every night. Then you must put something on it,“ said the doctor.\
+        He took out a piece of paper and wrote on it. “Buy this and put it on the foot before you go to bed every night,“ he said.\
+        “Thank you,“ said the bookseller. “And now, sir, here are your books.“\
+        “How much?“ said the doctor.\
+        “Two pounds.“\
+        “Good,“ said the doctor. “I shall not have to pay you anything.“\
+        “Why?“ asked the bookseller.\
+        “I told you about your foot. I want two pounds for that. If people come to my house, I ask them to pay one pound for a small thing like that. But when I go to their houses, I want two pounds. And I came here, didn’t I?“',
+        type: 2,
+        arr: [
+        '11.What happened to the bookseller one day?',
+        'A.He lost a box of books.',
+        'B.His foot was wounded by a box of books.',
+        'C.He lent the doctor a box of books.',
+        'D.He sold out all his books.',
+        '答案：B',
+        '12.The bookseller’s wife asked him ______.',
+        'A.to go out for some medicine',
+        'B.to send somebody for a doctor',
+        'C.to go to see the doctor',
+        'D.to wait for the doctor to come',
+        '答案：C',
+        '13.The bookseller didn’t take his wife’s advice because ______.',
+        'A.he was afraid of the doctor',
+        'B.he didn’t like to take medicine',
+        'C.he couldn’t walk by himself',
+        'D.he didn’t want to pay the doctor',
+        '答案：D',
+        '14.The doctor paid ______ for the books.',
+        'A.one pound',
+        'B.two pounds',
+        'C.nothing',
+        'D.something',
+        '答案：C',
+        '15.The bookseller paid ______ money for seeing the doctor in the end.',
+        'A.more',
+        'B.less',
+        'C.the same amount of',
+        'D.no',
+        '答案：A',
         ]
     },
     {
